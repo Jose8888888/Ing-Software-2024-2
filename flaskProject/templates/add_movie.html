@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar película</title>
+</head>
+<body>
+    <h1>Crear una película </h1>
+    <form method="post">
+    <label for="name">Ingrese el nombre:</label>
+    <input type="text" name="name" id="name"/>
+    <br>
+    <button>Crear película</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

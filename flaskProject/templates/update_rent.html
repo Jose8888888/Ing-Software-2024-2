@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar renta</title>
+</head>
+<body>
+    <h1>Actualizar una renta </h1>
+    <form method="post">
+    <label for="id">Id de la renta a actualizar:</label>
+    <input type="id" name="id" id="id"/>
+    <br>
+    <label for="status">Estatus (pon 1 para marcarlo como devuelta y 0 como no devuelta):</label>
+    <input type="int" name="status" id="status"/>
+    <br>
+    <button>Actualizar</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

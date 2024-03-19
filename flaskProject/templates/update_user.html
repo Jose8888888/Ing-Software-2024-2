@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar usuario</title>
+</head>
+<body>
+    <h1>Actualizar un usuario</h1>
+    <form method="post">
+    <label for="id">Id del usuario a actualizar:</label>
+    <input type="int" name="id" id="id"/>
+    <br>
+    <label for="col">Columna a actualizar:</label>
+    <input type="text" name="col" id="col"/>
+    <br>
+    <label for="valor">Nuevo valor:</label>
+    <input type="text" name="valor" id="valor"/>
+    <br>
+    <button>Actualizar</button>
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

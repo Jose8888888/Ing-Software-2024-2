@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de rentas</title>
+</head>
+<body>
+    <h1>Rentas:</h1>
+    {% for i in l %}
+        <p> {{ i }} </p>
+    {% endfor %}
+    {% for i in vencidas %}
+        <p style="color:#FF0000";> {{ i }} </p>
+    {% endfor %}
+    <a href="/">Regresar</a>
+</body>
+</html>
